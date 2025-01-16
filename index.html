@@ -428,7 +428,7 @@
                     <div class="col-md-12 text-center">
                         <div class="loading">Loading</div>
                         <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                        <div id="sent-message"></div>
                         <button type="submit">Send Message</button>
                     </div>
         
@@ -508,6 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById('email');
     const subject = document.getElementById('subject');
     const message = document.querySelector('textarea[name="message"]');
+    const success=document.getElementById('sent-message');
   
     form.addEventListener('submit', e => {
         console.log("button clicked");
@@ -527,10 +528,11 @@ document.addEventListener('DOMContentLoaded', () => {
         inputControl.classList.remove('success');
     };
   
-    const setSuccess = (element) => {
+    const setSuccess = (element,message) => {
         const inputControl = element.parentElement;
         const errorDisplay = inputControl.querySelector('.error');
-        errorDisplay.innerText = '';
+        errorDisplay.innerText = message;
+        errorDisplay.style.color = 'green';
         inputControl.classList.add('success');
         inputControl.classList.remove('error');
     };
@@ -565,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setError(email, 'Provide a valid email address');
             isValid = false;
         } else {
-            setSuccess(email);
+            setSuccess(email,'Thats the mail');
         }
   
         // Validate Subject
@@ -573,7 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setError(subject, 'Subject is required');
             isValid = false;
         } else {
-            setSuccess(subject);
+            setSuccess(subject,'Cool');
         }
   
         // Validate Message
@@ -581,8 +583,15 @@ document.addEventListener('DOMContentLoaded', () => {
             setError(message, 'Message is required');
             isValid = false;
         } else {
-            setSuccess(message);
+            setSuccess(message,'Nice');
         }
+
+        if(isValid){
+          success.innerHTML="Your message has been sent. Thank you!";
+          
+
+        }
+        
   
         return isValid;  // Return whether the form is valid or not
     };
