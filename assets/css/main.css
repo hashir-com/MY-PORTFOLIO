@@ -546,12 +546,13 @@ section,
   position: absolute;
   height: 100px !important;
   width: 100px !important;
+  transition-duration: 1s;
 }
 @media (max-width:762px) {
   .pp{
     z-index: 10 !important;
     display: block !important;
-    scale: 4;
+    scale: 3;
     left: 30vw !important;
     top: 20vh !important;
   }
