@@ -556,15 +556,16 @@ section,
     top: 20vh !important;
   }
 }
-@media (max-height:760px) {
+@media (max-width:576px) {
   .pp{
     z-index: 10 !important;
     display: block !important;
-    scale: 3.5;
+    scale: 3;
     left: 35vw !important;
-    top: 20vh !important;
+    top: 30vh !important;
   }
 }
+
 
 .hero:before {
   content: "";
@@ -601,6 +602,23 @@ section,
     left: 15px;
   }
 }
+@media (max-width:576px) {
+  .hero h1{
+    font-size: 150px;
+    left: 55px;
+    top: -350px;
+  }
+}
+
+@media (max-width:367px) {
+  .hero h1{
+    font-size: 130px;
+    left: 48px;
+    top: -320px;
+  }
+}
+
+
 .hero h2 {
   margin: 0;
   font-size: 64px;
