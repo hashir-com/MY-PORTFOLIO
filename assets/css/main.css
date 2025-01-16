@@ -555,17 +555,17 @@ section,
     left: 30vw !important;
     top: 20vh !important;
   }
-
-  @media (max-width:576px) {
-    .pp{
-      z-index: 10 !important;
-      display: block !important;
-      scale: 4;
-      left: 30vw !important;
-      top: 20vh !important;
-    }
-
 }
+@media (max-width:576px) {
+  .pp{
+    z-index: 10 !important;
+    display: block !important;
+    scale: 3.5;
+    left: 30vw !important;
+    top: 20vh !important;
+  }
+}
+
 .hero:before {
   content: "";
   background: color-mix(in srgb, var(--background-color), transparent 90%);
