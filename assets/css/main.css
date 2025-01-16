@@ -556,12 +556,12 @@ section,
     top: 20vh !important;
   }
 }
-@media (max-width:576px) {
+@media (max-height:760px) {
   .pp{
     z-index: 10 !important;
     display: block !important;
     scale: 3.5;
-    left: 30vw !important;
+    left: 35vw !important;
     top: 20vh !important;
   }
 }
@@ -642,6 +642,12 @@ section,
 
   .hero p {
     font-size: 20px;
+  }
+}
+@media (max-width:576px) {
+  .hero .text{
+    position: relative;
+    top: 100px;
   }
 }
 
